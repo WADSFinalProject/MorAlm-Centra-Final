@@ -1,0 +1,117 @@
+.cart-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cart-popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  max-height: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-popup-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 100;
+  color: #333;
+}
+
+.cart-popup-table-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(40px * 6 + 20px);
+}
+
+.cart-popup-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-popup-table th, .cart-popup-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-popup-table th {
+  background-color: #f2f2f2;
+  font-weight: 100;
+}
+
+.cart-popup-table td {
+  vertical-align: middle;
+}
+
+.cart-popup-table th.expedition-column, .cart-popup-table td.expedition-column {
+  width: 20%;
+}
+
+.cart-popup-table th.eta-column, .cart-popup-table td.eta-column {
+  width: 30%;
+}
+
+.cart-popup-table th.select-column, .cart-popup-table td.select-column {
+  width: 5%;
+}
+
+.deliver-selected-button {
+  background-color: #467E18;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-end;
+  margin-top: 10px; /* Add margin to move it slightly down */
+}
+
+.deliver-selected-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.deliver-selected-button:hover:not(:disabled) {
+  background-color: #3a6714;
+}
+
+.expedition-select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-button:hover {
+  color: #000;
+}

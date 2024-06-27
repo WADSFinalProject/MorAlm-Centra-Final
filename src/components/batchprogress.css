@@ -1,0 +1,180 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #033324;
+}
+
+.BackButton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1; 
+    left: 100px;
+    top: 99px;
+}
+
+.content {
+    flex-grow: 1;  
+    padding: 20px;
+    background-color: #FFFFF0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+.BP-title {
+    margin-top: 1%;
+    margin-bottom: 3%; 
+    font-family: DM Sans, sans-serif;
+    font-size: 30px;
+    display: flex; 
+    font-weight: 100;
+    align-items: center;
+}
+
+.title-header { 
+    display: none; /* Hide the title header */
+}
+
+.batch-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #FFFFF0;
+    color: black;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.batch-title {
+    display: flex;
+    justify-content: center; /* Center the batch name */
+    align-items: center;
+    font-family: DM Sans, sans-serif;
+    padding: 5px;
+    background-color: #033324;
+    color: white;
+    border: 1px solid black;
+    text-align: center; /* Center the text */
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    position: relative; /* Added */
+}
+
+.batch-name {
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: 100;
+}
+
+.three-dots {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-40%); /* Adjust this to move it down */
+    cursor: pointer;
+}
+
+.three-dots img {
+    width: 30px; /* Adjust size to make it bigger */
+    height: 30px;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px); /* Adjust this to move it down */
+    background-color: white;
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border: 1px solid #033324; /* Add border */
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: black; /* Ensure the text is visible */
+    font-family: DM Sans, sans-serif; /* Consistent font */
+}
+
+.dropdown-item:hover {
+    background-color: #f2f2f2;
+}
+
+.batch-content {
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.step-container:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    width: calc(100% + 40px); 
+    height: 1px;
+    background-color: #033324;
+    z-index: 0;
+}
+
+@media (min-width: 1200px) {
+    .step-container {
+        margin: 0 100px;
+    }
+    .step-container:not(:last-child)::after {
+        width: calc(100% + 200px); 
+    }
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #033324;
+    z-index: 1;
+}
+
+.step-container.completed .step-circle {
+    background-color: #033324;
+    color: white;
+}
+
+.step-name {
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 100; 
+}

@@ -1,0 +1,166 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif; 
+  background-color: #FFFFF0;
+  color: #333;
+}
+
+/* AppBar Styles */
+.appBar {
+  background-color: #467e18;
+  color: white;
+}
+
+/* Typography */
+h1,h4, h5, h6 {
+  font-weight: bold;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 5%;
+  font-size: 20px;
+}
+
+h2{
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  text-align: left;
+}
+
+/* Main Content Styles */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Chart and Progress Bars */
+.chart-container, .progress-bar-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 4%;
+}
+
+/* Progress Bar Specific */
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Recent Shipments */
+.shipment-container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.shipment-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.shipment-item:last-child {
+  border-bottom: none;
+}
+
+/* Buttons and Links */
+.button {
+  background-color: #467e18;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.link {
+  color: #467e18;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.dashboard {
+  margin-top: 5%;
+  padding-top: 3%;
+  display: flex; 
+  justify-content: space-between; 
+  align-items:center; 
+  width: 85%; 
+}
+
+.chart-section {
+  flex: 1;
+  padding: 0 auto
+}
+
+.chart-section, .dashboard {
+  width: 90%; 
+  margin: 0 auto;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+
+}
+
+.progress-section, .batch-info-section {
+  padding: 30px;
+  box-sizing: border-box;
+
+}
+
+.progress-section, .info-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.batch-info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.batch-info-section, .chart-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.chart-section, .batch-info-section {
+  grid-column: 2 / 3;
+}
+
+.left-section, .chart-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+}
